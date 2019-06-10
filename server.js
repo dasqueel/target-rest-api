@@ -1,3 +1,6 @@
+// process.env.NODE_ENV = "development_local"
+process.env.NODE_ENV = "development_remote"
+
 require("dotenv").config()
 const bodyParser = require("body-parser")
 const express = require("express")
@@ -19,7 +22,6 @@ server.use(bodyParser.json())
 server.use(cors())
 
 console.log("env: ", process.env)
-
 // mongoose
 mongoose.connect(
   config.mongoURI[server.settings.env],

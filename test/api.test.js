@@ -1,4 +1,5 @@
-process.env.NODE_ENV = "test"
+// process.env.NODE_ENV = "test_local"
+process.env.NODE_ENV = "test_remote"
 
 const chai = require("chai")
 const chaiHttp = require("chai-http")
