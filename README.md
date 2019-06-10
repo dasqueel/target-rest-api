@@ -24,6 +24,11 @@ npm i
 
 # Usage
 
+If want to run the local instance, thre are a few steps before.
+
+- Comment out line 2 and Uncomment line 1 in both server.js and test/api.test.js, to run local envs
+- Uncomment lines 41-54 in server.js to write a document to the local mongo db
+
 Run the tests
 
 ```

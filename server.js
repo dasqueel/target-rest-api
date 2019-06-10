@@ -21,7 +21,6 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
 server.use(cors())
 
-console.log("env: ", process.env)
 // mongoose
 mongoose.connect(
   config.mongoURI[server.settings.env],
@@ -37,7 +36,8 @@ mongoose.connect(
   }
 )
 
-// add the one product object to the nosql DB
+// UNCOMMENT ME TO ADD ONE PRODUCT DOCUMENT TO LOCAL NOSQL DB
+/*
 require("./models/product")
 const Product = mongoose.model("Product")
 
@@ -52,6 +52,7 @@ const newProduct = new Product({
 })
 
 newProduct.save()
+*/
 
 // set up routes
 const routes = require("./routes/routes")
