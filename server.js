@@ -9,10 +9,7 @@ const mongooseOptions = {
   useFindAndModify: false
 }
 mongoose.Promise = global.Promise
-
 const cors = require("cors")
-const passport = require("passport")
-
 const port = process.env.PORT || 8080
 const server = express()
 
@@ -20,8 +17,8 @@ const server = express()
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
 server.use(cors())
-// passport for authentication
-// server.use(passport.initialize())
+
+console.log("env: ", process.env)
 
 // mongoose
 mongoose.connect(

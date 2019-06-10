@@ -66,7 +66,7 @@ describe("Products", () => {
   it("should return error response on /product/:id GET", done => {
     chai
       .request(server)
-      .get("/product/someInvalidProductCode")
+      .get("/product/someInvalidProductId")
       .end((err, res) => {
         res.should.have.status(200)
         res.should.be.json

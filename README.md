@@ -36,12 +36,36 @@ Run the app
 npm start
 ```
 
-Make api calls
+### Make api calls
 
-Working:
+Get Happy Path:
 
 ```
 curl localhost:8080/product/13860428
+```
+
+Get Error 1
+
+```
+curl localhost:8080/product/someInvalidProductId
+```
+
+Put Happy Path
+
+```
+curl -X PUT -H "Content-Type: application/json" -d '{"value":10.99}' http://localhost:8080/product/13860428
+```
+
+Put Error 1
+
+```
+curl -X PUT -H "Content-Type: application/json" -d '{"value":10.99}' http://localhost:8080/product/someInvalidProductId
+```
+
+Put Error 2
+
+```
+curl -X PUT -H "Content-Type: application/json" -d '{"value":"10.99"}' http://localhost:8080/product/13860428
 ```
 
 # Working Instance
