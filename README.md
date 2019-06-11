@@ -10,7 +10,7 @@
 
 * Write tests for the get and put requests
 
-* swagger documentation for API
+* swagger documentation for API (didnt have enough time to finish this part, but documentation is vital!)
 
 # Installation
 
@@ -26,7 +26,7 @@ npm i
 
 If want to run the local instance, thre are a few steps before.
 
-- Comment out line 2 and Uncomment line 1 in both server.js and test/api.test.js, to run local envs
+- Comment out line 2 and Uncomment line 1 in both `server.js` AND `test/api.test.js`, to run local envs
 - Uncomment lines 41-54 in server.js to write a document to the local mongo db
 
 Run the tests
@@ -75,4 +75,8 @@ curl -X PUT -H "Content-Type: application/json" -d '{"value":"10.99"}' http://lo
 
 # Working Instance
 
-A working instance is on: <the heroku api url>
+A working instance is on: https://target-neil.herokuapp.com
+
+So all the curl commands should work on https://target-neil.herokuapp.com as well.
+
+For example `curl https://target-neil.herokuapp.com/product/13860428`
