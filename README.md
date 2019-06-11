@@ -28,6 +28,7 @@ If want to run the local instance, thre are a few steps before.
 
 - Comment out line 2 and Uncomment line 1 in both `server.js` AND `test/api.test.js`, to run local envs
 - Uncomment lines 41-54 in server.js to write a document to the local mongo db
+- Have a local instance of mongodb service running on port 27017 (default port).
 
 Run the tests
 
